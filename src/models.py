@@ -31,7 +31,7 @@ from sklearn.metrics import matthews_corrcoef
 if "cs.nyu.edu" in os.uname()[1] or "dgx" in os.uname()[1]:
     PATH_PREFIX = '/misc/vlgscratch4/BowmanGroup/awang/'
 else:
-    PATH_PREFIX = '/beegfs/aw3272/'
+    PATH_PREFIX = '/home/lpmayos/code/glue_models_and_data/'
 
 PATH_TO_COVE = PATH_PREFIX + '/models/cove'
 sys.path.append(PATH_TO_COVE)

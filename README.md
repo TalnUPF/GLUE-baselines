@@ -51,7 +51,7 @@ NB: The version of AllenNLP used has [issues](https://github.com/allenai/allennl
 ## GloVe, CoVe, and ELMo
 
 Many of our models make use of [GloVe pretrained word embeddings](https://nlp.stanford.edu/projects/glove/), in particular the 300-dimensional, 840B version.
-To use GloVe vectors, download and extract the relevant files and set ``word_embs_file`` to the GloVe file.
+To use GloVe vectors, download and extract the relevant files and set ``word_embs_file`` in run_stuff.sh to the GloVe file.
 To learn embeddings from scratch, set ``--glove`` to 0.
 
 We use the CoVe implementation provided [here](https://github.com/salesforce/cove).

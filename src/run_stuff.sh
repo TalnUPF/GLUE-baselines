@@ -8,7 +8,7 @@
 # SBATCH -t 4-00:00
 # SBATCH --gres=gpu:p40:1
 
-SCRATCH_PREFIX='/misc/vlgscratch4/BowmanGroup/awang/'
+SCRATCH_PREFIX='/home/lpmayos/code/glue_models_and_data'
 #SCRATCH_PREFIX='/beegfs/aw3272/'
 PROJECT_NAME='mtl-sent-rep'
 EXP_NAME="debug"
@@ -29,7 +29,7 @@ CLASSIFIER=mlp
 d_hid_cls=512
 max_seq_len=40
 VOCAB_SIZE=30000
-WORD_EMBS_FILE="${SCRATCH_PREFIX}/raw_data/GloVe/glove.840B.300d.txt"
+WORD_EMBS_FILE="${SCRATCH_PREFIX}/glove/glove.840B.300d.txt"
 
 d_word=300
 d_hid=512
