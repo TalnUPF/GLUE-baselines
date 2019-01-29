@@ -18,6 +18,13 @@ conda env create -f environment.yml
 
 Note: The version of AllenNLP available on pip may not be compatible with PyTorch 0.4, in which we recommend installing from [source](https://github.com/allenai/allennlp).
 
+Note lpmayos: this is the installation sequence I followed:
+	cd code/glue_baselines/
+    conda env create -f environment.yml 
+    conda activate glue
+    pip install allennlp
+
+
 ## Downloading GLUE
 
 We provide a convenience python script for downloading all GLUE data and standard splits.
