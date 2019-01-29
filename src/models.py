@@ -33,7 +33,7 @@ if "cs.nyu.edu" in os.uname()[1] or "dgx" in os.uname()[1]:
 else:
     PATH_PREFIX = '/home/lpmayos/code/glue_models_and_data/'
 
-PATH_TO_COVE = PATH_PREFIX + '/models/cove'
+PATH_TO_COVE = PATH_PREFIX + '/cove'
 sys.path.append(PATH_TO_COVE)
 from cove import MTLSTM as cove_lstm
 

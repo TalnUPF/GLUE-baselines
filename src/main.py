@@ -1,4 +1,6 @@
 '''Train a multi-task model using AllenNLP'''
+# python main.py --exp_dir exp_dir --run_dir exp_dir/run_dir --train_tasks all --word_embs_file /home/lpmayos/code/glue_models_and_data/glove/glove.840B.300d.txt  --glove 1 --cove 1 --elmo 1
+
 import os
 import sys
 import time
