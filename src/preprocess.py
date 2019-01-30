@@ -20,7 +20,7 @@ if "cs.nyu.edu" in os.uname()[1] or "dgx" in os.uname()[1]:
 else:
     PATH_PREFIX = '/home/lpmayos/code/glue_models_and_data/glue_data/'
 
-PATH_PREFIX = PATH_PREFIX + 'processed_data/mtl-sentence-representations/'
+# PATH_PREFIX = PATH_PREFIX + 'processed_data/mtl-sentence-representations/'
 
 ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnli', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
 NAME2INFO = {'sst': (SSTTask, 'SST-2/'),
