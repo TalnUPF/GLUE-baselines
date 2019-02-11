@@ -21,7 +21,6 @@ and report any metrics calculated by the model.
     --cuda_device CUDA_DEVICE
                             id of GPU to use (if any)
 """
-import ipdb as pdb
 import logging
 import tqdm
 

@@ -8,7 +8,6 @@ rather than instantiating a ``MultiTaskTrainer`` yourself.
 """
 
 import os
-import ipdb as pdb # pylint: disable=unused-import
 import math
 import time
 import copy
@@ -152,7 +151,8 @@ class MultiTaskTrainer:
                 out_of_patience = min(metric_history[-patience:]) >= cur_score
 
         if best_so_far and out_of_patience: # then something is up
-            pdb.set_trace()
+            # pdb.set_trace()
+            print('something is up')
 
         return best_so_far, out_of_patience
 
@@ -683,7 +683,8 @@ class SamplingMultiTaskTrainer:
                 out_of_patience = min(metric_history[-patience:]) >= cur_score
 
         if best_so_far and out_of_patience:
-            pdb.set_trace()
+            # pdb.set_trace()
+            print('commented out ipdb')
 
         return best_so_far, out_of_patience
 
@@ -898,7 +899,7 @@ class SamplingMultiTaskTrainer:
                     logger.info("Batch %d/%d: %s", batch_num, n_val_batches, description)
                     task_info['last_log'] = time.time()
                 n_examples += batch['label'].size()[0]
-            assert batch_num == n_val_batches, pdb.set_trace()
+            assert batch_num == n_val_batches  #, pdb.set_trace()
 
             # Get task validation metrics and store in all_val_metrics
             task_metrics = task.get_metrics(reset=True)

@@ -2,7 +2,6 @@
 import os
 import logging as log
 from collections import defaultdict
-import ipdb as pdb # pylint disable=unused-import
 import _pickle as pkl
 import numpy as np
 import torch

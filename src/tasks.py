@@ -6,7 +6,6 @@ import codecs
 import random
 import logging as log
 from abc import ABCMeta, abstractmethod
-import ipdb as pdb
 import nltk
 
 from allennlp.training.metrics import CategoricalAccuracy, F1Measure, Average
@@ -477,7 +476,6 @@ class RTE5Task(Task):
                     assert len(sents1) == len(sents2) == len(targs)
                 except AssertionError as e:
                     print(e)
-                    pdb.set_trace()
             return sents1, sents2, targs
 
         devs = ["RTE5_MainTask_DevSet.xml"]
@@ -741,8 +739,8 @@ class TwitterIronyTask(Task):
             next(fh)
             for row in fh:
                 row = row.split('\t')
-                if len(row) > 3:
-                    pdb.set_trace()
+                # if len(row) > 3:
+                #     pdb.set_trace()
                 targ = int(row[1])
                 sent = process_sentence(row[2], max_seq_len)
                 targs.append(targ)

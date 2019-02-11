@@ -1,7 +1,6 @@
 '''AllenNLP models and functions for building them'''
 import os
 import sys
-import ipdb as pdb
 import logging as log
 from typing import Any, Dict, List, Optional
 

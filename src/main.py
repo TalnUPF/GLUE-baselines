@@ -9,7 +9,6 @@ import random
 import argparse
 import logging as log
 import _pickle as pkl
-import ipdb as pdb
 import torch
 
 from allennlp.data.iterators import BasicIterator, BucketIterator
