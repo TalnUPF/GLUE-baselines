@@ -2,7 +2,7 @@ from typing import Dict, Union
 import pdb
 import logging
 
-# from overrides import overrides
+from overrides import overrides
 import numpy
 import torch
 from torch.autograd import Variable
@@ -51,19 +51,19 @@ class NumericField(Field[numpy.ndarray]):
                            "`non_padded_namespaces` parameter in Vocabulary.", self._label_namespace)
 
     # idk what this is for
-    # @overrides
+    @overrides
     def count_vocab_items(self, counter: Dict[str, Dict[str, int]]):
         if self._label_id is None:
             counter[self._label_namespace][self.label] += 1  # type: ignore
 
-    # @overrides
+    @overrides
     def get_padding_lengths(self) -> Dict[str, int]:  # pylint: disable=no-self-use
         return {}
 
     def as_array(self, padding_lengths: Dict[str, int]) -> numpy.ndarray:  # pylint: disable=unused-argument
         return numpy.asarray([self._label_id])
 
-    # @overrides
+    @overrides
     def as_tensor(self, padding_lengths: Dict[str, int],
                   cuda_device: int = -1,
                   for_training: bool = True) -> torch.Tensor:  # pylint: disable=unused-argument
@@ -71,6 +71,6 @@ class NumericField(Field[numpy.ndarray]):
         tensor = Variable(torch.FloatTensor([label_id]), volatile=not for_training)
         return tensor if cuda_device == -1 else tensor.cuda(cuda_device)
 
-    # @overrides
+    @overrides
     def empty_field(self):
         return NumericField(0, self._label_namespace)
