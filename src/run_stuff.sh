@@ -8,7 +8,7 @@
 # SBATCH -t 4-00:00
 # SBATCH --gres=gpu:p40:1
 
-SCRATCH_PREFIX='/home/lpmayos/code/glue_models_and_data'
+SCRATCH_PREFIX='/homedtic/lperez/glue/glue_models_and_data'
 #SCRATCH_PREFIX='/beegfs/aw3272/'
 PROJECT_NAME='mtl-sent-rep'
 EXP_NAME="debug"
